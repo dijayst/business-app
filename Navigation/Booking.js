@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 
 export default 
-function BookingScreen({route}) {
+function Booking({route}) {
 ////const { Business } = route.params
 //const businessId = route.params?.id;
 

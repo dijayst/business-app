@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-export default function ProfileScreen() {
+export default function Profile() {
     const profilemenu=[{
         id:1,
         name:"Home",

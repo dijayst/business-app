@@ -15,21 +15,21 @@ export default function Categories() {
 
     return (
         <View style={{marginTop:10}}>
-            <Heading text={"categories"} isViewAll={true}/>
+            <Heading text={"Categories"} isViewAll={true}/>
 
             <FlatList
                 pagingEnabled
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 data={print.data}
-                renderItem={({ item, index }) => index<=4&&(
+                renderItem={({ item, index }) => index<=3&&(
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("Businesslistbycategoryscreen",{category:item.shoetype})}>
                     <View style={styles.iconcontainer}>
                       <Image source={item.image1} alt="img" style={{width:39,height:39,marginTop:-19 ,borderRadius:20,
         }} />
                     </View>
                     
-                    <Text style={{marginTop:-12,fontFamily:"outfit-medium"}}>{item.shoetype}</Text>
+                    <Text style={{marginTop:-12,fontSize:10,fontFamily:"outfit-medium",fontWeight:"bold"}}>{item.shoetype}</Text>
                     </TouchableOpacity>)} />
                 
         </View>
@@ -40,7 +40,13 @@ export default function Categories() {
 const styles=StyleSheet.create({
     container:{
 flex:1,
-alignItems:"center"
+alignItems:"center",
+marginRight:5,
+marginLeft:10,
+//height:50,
+//backgroundColor:"red",
+//padding:5,
+//borderRadius:15
     },
     iconcontainer:{
         //backgroundColor:"#8E3FFF",

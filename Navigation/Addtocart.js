@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import CalendarPicker from "react-native-calendar-picker";
 import Heading from './Heading';
 import {useNavigation} from "@react-navigation/native";
-import BookingScreen from './BookingScreen';
+import BookingScreen from './Booking';
 import {useUser} from '@clerk/clerk-expo';
 
 

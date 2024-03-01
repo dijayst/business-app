@@ -42,8 +42,8 @@ export default function Slider() {
             data={print.data}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            renderItem={({item,index})=>(<View style={{marginRight:2,padding:10,marginTop:-9}}>
-<Image source={item.image} alt="img" style={styles.sliderimg} />
+            renderItem={({item,index})=>(<View style={{marginRight:-4,padding:10}}>
+           <Image source={item.image} alt="img" style={styles.sliderimg} />
                  
             </View>)}
             />
@@ -56,9 +56,11 @@ export default function Slider() {
 
 const styles=StyleSheet.create({
     sliderimg:{
-      width:270,
-      height:140,
+      width:255,
+      height:130,
       borderRadius:20,
+      marginLeft:8,
+      marginRight:-11
     //  objectFit:'contain',
     },
     catcontainer:{
@@ -67,7 +69,7 @@ alignItems:"center"
     },
     Heading:{
       fontSize:20,
-    //  fontFamily:"outfit-medium",
+      fontFamily:"outfit-medium",
       marginBottom:10,
     },
     categorycontainer:{

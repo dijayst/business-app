@@ -88,7 +88,7 @@ alignItems:"center"
       },
       Heading:{
         fontSize:20,
-       // fontFamily:"outfit-medium",
+        fontFamily:"outfit-medium",
         marginBottom:10,
       },
       categorycontainer:{
@@ -111,13 +111,13 @@ alignItems:"center"
     
       },
       container:{
-       // backgroundColor:"#ecf9e0"#fff,
-     
+        backgroundColor:"green",
+     //marginTop:-49,
     backgroundColor:"#efe8f9",
     height:"100%",
     width:"100%",
     flex:1,
-padding:9
+//padding:9
       },
       category:{
       

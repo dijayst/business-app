@@ -22,17 +22,16 @@ export default function BusinessList() {
     
 
     return (
-        <View style={{marginTop:9,}}>
+        <View style={{marginTop:9}}>
             <Heading text={"Latest Business"} isViewAll={true}/>
                  
           
 <FlatList 
-pagingEnabled
 horizontal
 showsHorizontalScrollIndicator={false}
 data={print.data}
  renderItem={({item,index})=>(
-     <View><Businesslistsmall  business={item}/></View>
+     <View style={{marginRight:10}}><Businesslistsmall  business={item}/></View>
                 
               )}
  />
@@ -50,7 +49,7 @@ alignItems:"center"
     },
     Heading:{
       fontSize:20,
-     // fontFamily:"outfit-medium",
+     fontFamily:"outfit-medium",
       marginBottom:10,
     },
     sliderimg:{

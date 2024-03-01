@@ -16,19 +16,19 @@ export default function Header() {
           <View style={styles.ProfileMainContainer}>
           <View style={styles.ProfileContainer}>
               <Image source={require("../image1/alpha.jpg")} style={styles.userimage}/>
-              <View>
-                <Text style={{color:"white",fontFamily:'oufit-medium'}}>Welcome,</Text>
-                <Text style={{color:"white",fontSize:20,fontFamily:'oufit'}}>Game Play</Text>
+              <View >
+                <Text style={{color:"white",fontFamily:'oufit-medium',fontSize:11}}>Welcome,</Text>
+                <Text style={{color:"white",fontSize:16,fontFamily:'oufit',fontWeight:"bold"}}>Game Play</Text>
               </View>
             </View>
-          
-          <FontAwesome name="bookmark-o" size={24} color="white"/>
-            
+          <View style={{marginTop:34}}>
+          <FontAwesome  style={{}} name="bookmark-o" size={24} color="white"/>
+            </View>
             </View>
 
             <View style={styles.searchBarContainer}>
-           <TextInput placeholder="search" style={styles.textinput}/>
-           <FontAwesome name="search" color={"#8E3FFF"} size={24} style={styles.searchbtn}/>
+           <TextInput placeholder="Search" style={styles.textinput}/>
+           <FontAwesome name="search" color={"#8E3FFF"} size={16} style={styles.searchbtn}/>
        </View>
         </View>
     )
@@ -39,7 +39,7 @@ export default function Header() {
 const styles =StyleSheet.create({
     container:{
       backgroundColor:"#8E3FFF",
-      padding:20,
+      //padding:20,
      // margin:-20,
       width:"100%",
       paddingTop:19,
@@ -49,7 +49,7 @@ const styles =StyleSheet.create({
      // backgroundColor: "#c542f5",
      // flex:1,
      // color:"grey",
-    //  height: 250,
+      height: 160,
     //paddingHorizontal:0,
     //borderRadius:5
     },ProfileMainContainer:{
@@ -57,7 +57,11 @@ const styles =StyleSheet.create({
       display:"flex",
       flexDirection:"row",
       alignContent:"center",
-      justifyContent:"space-between"
+      justifyContent:"space-between",
+      marginLeft:20,
+      marginRight:25,
+      //marginTop:18
+      
     },
     body:{
       backgroundColor:'pink',
@@ -78,22 +82,26 @@ const styles =StyleSheet.create({
       display:"flex",
       flexDirection:"row",
       alignContent:"center",
-      gap:10
+      gap:10,
+      //marginBottom:10
+      marginTop:22
     },
   textinput:{
     padding:7,
     paddingHorizontal:16,
     backgroundColor:"white",
     borderRadius:8,
-    width:"85%",
+    width:"76%",
+    marginLeft:20,
     fontSize:16,
-   // fontFamily:'oufit'
+    fontFamily:'oufit'
   },
   searchBarContainer:{
-    marginTop:15,
+    marginTop:12,
     display:"flex",
     flexDirection:"row",
-    gap:10
+    gap:8,
+    height:38
 
   },
   searchbtn:{
@@ -102,8 +110,9 @@ const styles =StyleSheet.create({
     borderRadius:8
   },
   userimage:{
-    width:45,
-    height:45,
-    borderRadius:99
+    width:37,
+    height:37,
+    borderRadius:99,
+    marginTop:3
   }
   })

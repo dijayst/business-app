@@ -7,7 +7,7 @@ export default function Heading({text,isViewAll=false}) {
         <View style={styles.container}>
             <Text style={styles.heading}>{text}</Text>
             
-            {isViewAll && <Text style={{color:"#8E3FFF",}}>View All</Text>}
+            {isViewAll && <Text style={{color:"#8E3FFF",marginRight:20,fontSize:10.2,fontWeight:"bold"}}>View All</Text>}
         </View>
     )
 }
@@ -20,15 +20,17 @@ const styles=StyleSheet.create({
         flexDirection:"row",
         alignItems:"center",
         justifyContent:"space-between",
-marginTop:-10
+marginTop:-2
     },
     heading:{
-        fontSize:20,
-      //  fontFamily:"outfit-medium",
-        marginBottom:18,
+        fontSize:16,
+       fontFamily:"outfit-medium",
+        marginBottom:19,
         padding:2,
-        
-       // backgroundColor:'red'
+        marginLeft:15,
+        fontWeight:"bold",
+        marginBottom:11
+    //  backgroundColor:'red'
     },
 
 })

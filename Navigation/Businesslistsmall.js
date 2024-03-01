@@ -3,6 +3,7 @@ import { View, Text,Image,TouchableOpacity,StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 //import {useNavigation} from "@react-navigation/native";
 import {useNavigation} from "@react-navigation/native";
+import { FontAwesome6 } from '@expo/vector-icons';
 
 export default function Businesslistsmall({business}) {
    // const navigation=useNavigation();
@@ -12,11 +13,13 @@ export default function Businesslistsmall({business}) {
     return (
         <TouchableOpacity style={styles.container} onPress={()=>navigation.push('Businessdetails',{Business:business})}>
                   <Image source={business.image}style={styles.image}/>
-                  <View>
+                   <View style={{marginLeft:8,}}>
                       
-                  <Text  style={{ fontFamily:"outfit-medium",color:"grey",fontSize:17,height:17}}>{business.shoetype}</Text>
-                  
-                  <Text style={{  fontFamily:"outfit",fontSize:13}}>{business.price}</Text>
+                  <Text style={{  fontFamily:"outfit",fontSize:12,fontWeight:"bold"}}>{business.title}</Text>
+    
+                  <Text  style={{ fontFamily:"outfit-medium",color:"grey",fontSize:10,}}>{business.shoetype}</Text>
+            
+                  <Text style={{ width:55,borderRadius:5, fontFamily:"outfit",fontSize:8,color:"white",backgroundColor:"#8E3FFF"}}><FontAwesome6 name="naira-sign" size={12} color="#8E3FFF" />{business.price}</Text>
     
                  
               
@@ -28,15 +31,21 @@ export default function Businesslistsmall({business}) {
 }
 const styles = StyleSheet.create({
     image:{
-        width:150,
-        height:120,
-        borderRadius:10
+        width:147,
+        height:90,
+        borderRadius:10,
+        marginTop:-4,
+      // marginRight:2,
+       marginLeft:-4
     },
     container:{
         padding:10,
         backgroundColor:"white",
         borderRadius:10,
-    marginTop:-10
+    width:160,
+    height:175,
+    marginLeft:14,
+    marginRight:-17
     },
     searchBarContainer:{
         marginTop:15,

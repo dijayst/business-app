@@ -49,24 +49,10 @@ const[fontsLoaded]= useFonts({
 
   return (
     
-    <ClerkProvider
-    publishableKey='pk_test_aGlwLXJhbS03Ny5jbGVyay5hY2NvdW50cy5kZXYk'
-    tokenCache={tokenCache}
-  >
-      <View style={styles.container}>
-{/* SIGN IN*/}
-<SignedIn style={{backgroundColor:"green"}}>
-<NavigationContainer>
-    <Tabnavigation/>
-  </NavigationContainer>
-</SignedIn>
-<SignedOut>
-  <LoginScreen/>
-</SignedOut>
-<StatusBar style="auto"/>
-</View>
-</ClerkProvider>
-
+      <NavigationContainer>
+        <Tabnavigation></Tabnavigation>
+      </NavigationContainer>
+    
     
   )}
 
